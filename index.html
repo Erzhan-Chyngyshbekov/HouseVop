@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HouseVop</title>
+
+    <link rel="stylesheet" href="./styles/styles.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav__content">
+        <img src="./assets/images/logo.png" alt="logo" />
+
+        <ul>
+          <li>О комплексе</li>
+          <li>Район</li>
+          <li>Каталог квартир</li>
+          <li>Ипотека</li>
+          <li>Контакты</li>
+        </ul>
+
+        <img id="burger-menu" src="./assets/icons/menu.svg" alt="burger-menu" />
+      </div>
+    </nav>
+
+    <div id="nav-menu">
+      <ul>
+        <li>О комплексе</li>
+        <li>Район</li>
+        <li>Каталог квартир</li>
+        <li>Ипотека</li>
+        <li>Контакты</li>
+      </ul>
+    </div>
+
+    <section class="hero">
+      <h1>
+        Жилой комплекс в историческом центре
+      </h1>
+
+      <img
+        class="hero__mouse_icon"
+        src="./assets/icons/MouseIcon.png"
+        alt="mouse-icon"
+      />
+
+      <div class="hero__info">
+        <div>
+          <img src="./assets/icons/MapIcon.png" alt="map-icon" />
+          <p>
+            Наб. реки Фонтанки 10-15
+          </p>
+        </div>
+
+        <div>
+          <img src="./assets/icons/PhoneIcon.png" alt="phone-icon" />
+          <p>8 (812) 123-45-67</p>
+        </div>
+      </div>
+    </section>
+
+    <main>
+      <span class="II">II</span>
+      <span class="III">III</span>
+      <div class="features">
+        <div class="features__item">
+          <img src="./assets/icons/ParkIcon.png" alt="park-icon" />
+          <p>Рядом исторические парки и скверы</p>
+        </div>
+
+        <div class="features__item">
+          <img src="./assets/icons/BuildingIcon.png" alt="building-icon" />
+          <p>Полностью обустроенный</p>
+        </div>
+
+        <div class="features__item">
+          <img src="./assets/icons/FountainIcon.png" alt="fountain-icon" />
+          <p>10 фонтанов на территории</p>
+        </div>
+
+        <div class="features__item">
+          <img src="./assets/icons/BicycleIcon.png" alt="bicycle-icon" />
+          <p>6 км велодорожек</p>
+        </div>
+      </div>
+
+      <div class="container-2">
+        <h2>Наши квартиры</h2>
+        <div class="container-2__info">
+          <div class="loft">
+            <img src="./assets/images/loft1.png" alt="" /> <br />
+            <span>Лофт - 3 этаж</span>
+          </div>
+          <div class="loft">
+            <img src="./assets/images/loft2.png" alt="" /> <br />
+            <span>Лофт - 2 этаж</span>
+          </div>
+          <div class="loft">
+            <img src="./assets/images/loft1.png" alt="" /> <br />
+            <span>Лофт - 3 этаж</span>
+          </div>
+          <div class="loft">
+            <img src="./assets/images/loft2.png" alt="" /> <br />
+            <span>Лофт - 2 этаж</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      let menuClicked = false;
+      const burger_menu = document.getElementById("burger-menu");
+
+      const nav_menu = document.getElementById("nav-menu");
+
+      burger_menu.addEventListener("click", () => {
+        if (menuClicked) {
+          nav_menu.style.marginRight = "-170px";
+          nav_menu.style.display = "none";
+        } else {
+          nav_menu.style.marginRight = 0;
+          nav_menu.style.display = "block";
+        }
+        menuClicked = !menuClicked;
+      });
+    </script>
+
+    <div class="footerbg">
+      <div class="bigdiv">
+        <div class="LoremIpsum">
+          <h4>Хотите посмотреть?</h4>
+          <div class="text">
+            Lorem Ipsum - это текст - "рыба", часто используемый в печати и
+            веб-дизайне. Lorem Ipsum явзяется стандартной "рыбой" для текстов на
+            латинице с начала XVI века. В то время некий безымяный печатник
+            создал большую коллекцию размеров и форм шрифтов, используя Lorem
+            Ipsum для распечатки образцов
+          </div>
+        </div>
+        <div class="contacts">
+          <input type="text" placeholder="Ваше имя" />
+          <input type="tel" placeholder="Ваш телефон" />
+          <div class="text123">
+            *Мы никому не передаем ваши данные. И не сохраняем ваш номер в
+            базу.*
+          </div>
+          <button class="yellow">Просмотреть район</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
